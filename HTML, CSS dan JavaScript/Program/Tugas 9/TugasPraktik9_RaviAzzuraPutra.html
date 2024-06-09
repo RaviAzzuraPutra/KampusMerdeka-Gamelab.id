@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktik 9</title>
+</head>
+
+<body>
+
+    <p id="paragraf1">
+
+    </p>
+    <p id="paragraf2">
+
+    </p>
+
+</body>
+<script>
+    const NamaIndonesia = "Ravi Azzura Putra";
+    const NamaJepang = "ラヴィ アズラ プトラ";
+
+    const judul = document.createElement("h1");
+    judul.textContent = "Belajar DOM";
+    document.body.append(judul);
+
+    const paragraf1 = document.getElementById("paragraf1");
+    paragraf1.innerText = `Nama saya pada bahasa Indonesia adalah : ${NamaIndonesia}`;
+
+
+    const paragraf2 = document.getElementById("paragraf2")
+    paragraf2.innerText = `Nama saya pada bahasa Jepang adalah : ${NamaJepang}`;
+
+
+    setInterval(() => {
+        paragraf1.style.color = "gold";
+        paragraf2.style.color = "pink";
+
+        setTimeout(() => {
+            paragraf1.style.color = "green";
+            paragraf2.style.color = "black";
+
+            setTimeout(() => {
+                paragraf1.style.color = "red";
+                paragraf2.style.color = "blue";
+            }, 3000);
+
+        }, 3000);
+
+    }, 2000);
+</script>
+
+</html>

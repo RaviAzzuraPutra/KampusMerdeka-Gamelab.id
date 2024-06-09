@@ -1,0 +1,14 @@
+[{
+"kode_buku": "C001",
+"judul_buku": "Pemrogramman dasar c++",
+"pengarang": "Gamelab Indonesia",
+"jml_halaman": 700,
+"thn_terbit": 2022
+},
+{
+"kode_buku": "Z001",
+"judul_buku": "Belajar Bahasa Arab Dari 0",
+"pengarang": "Intang Mugina",
+"jml_halaman": 501,
+"thn_terbit": 2019
+}]

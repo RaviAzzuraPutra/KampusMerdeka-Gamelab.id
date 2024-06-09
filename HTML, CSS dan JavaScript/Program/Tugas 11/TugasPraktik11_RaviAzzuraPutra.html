@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktik 11</title>
+</head>
+
+<body>
+    <h1>Belajar Web Storage</h1>
+    <form id="Data">
+        <label for="nama">Nama: </label>
+        <input type="text" id="nama" class="nama" name="nama" required>
+        <label for="email">Email: </label>
+        <input type="email" id="email" class="email" name="email" required>
+        <label for="noTelepon">No Telepon: </label>
+        <input type="text" id="noTelepon" class="noTelepon" name="noTelepon" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="Storage"></div>
+</body>
+<script>
+    const form = document.getElementById('Data');
+    const save = document.getElementById('Storage');
+
+    const SaveData = (event) => {
+        event.preventDefault();
+        const nama = form.elements.nama.value;
+        const email = form.elements.email.value;
+        const noTelepon = form.elements.noTelepon.value;
+
+        localStorage.setItem('nama', nama);
+        localStorage.setItem('email', email);
+        localStorage.setItem('noTelepon', noTelepon);
+
+        sessionStorage.setItem('nama', nama);
+        sessionStorage.setItem('email', email);
+        sessionStorage.setItem('noTelepon', noTelepon);
+
+        menampilkanSavedData();
+    }
+
+    const menampilkanSavedData = () => {
+        const localStorageNama = localStorage.getItem('nama');
+        const localStorageEmail = localStorage.getItem('email');
+        const localStorageNoTelepon = localStorage.getItem('noTelepon');
+
+        const sessionStorageNama = sessionStorage.getItem('nama');
+        const sessionStorageEmail = sessionStorage.getItem('email');
+        const sessionStorageNoTelepon = sessionStorage.getItem('noTelepon');
+
+        save.innerHTML = `
+            <h3>Saved Data</h3>
+            <p><strong>Local Storage:</strong></p>
+            <p>Name: ${localStorageNama}</p>
+            <p>Email: ${localStorageEmail}</p>
+            <p>No Telepon: ${localStorageNoTelepon}</p>
+            <p><strong>Session Storage:</strong></p>
+            <p>Name: ${sessionStorageNama}</p>
+            <p>Email: ${sessionStorageEmail}</p>
+            <p>No Telepon: ${sessionStorageNoTelepon}</p>
+        `;
+    }
+
+    menampilkanSavedData();
+
+    form.addEventListener('submit', SaveData);
+</script>
+
+</html>

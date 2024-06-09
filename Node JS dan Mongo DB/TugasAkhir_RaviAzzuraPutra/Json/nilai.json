@@ -1,0 +1,35 @@
+[{
+  "kode_mapel": "PW",
+  "absensi": 85,
+  "nilai_tugas": 82,
+  "nilai_uts":"94",
+  "nilai_uas":"95"
+},
+{
+  "kode_mapel": "AP",
+  "absensi": 90,
+  "nilai_tugas": 86,
+  "nilai_uts":"92",
+  "nilai_uas":"96"
+},
+{
+  "kode_mapel": "JK",
+  "absensi": 95,
+  "nilai_tugas": 85,
+  "nilai_uts":"92",
+  "nilai_uas":"96"
+},
+{
+  "kode_mapel": "MTK",
+  "absensi": 90,
+  "nilai_tugas": 85,
+  "nilai_uts":"91",
+  "nilai_uas":"97"
+},
+{
+  "kode_mapel": "BING",
+  "absensi": 90,
+  "nilai_tugas": 83,
+  "nilai_uts":"92",
+  "nilai_uas":"95"
+}]

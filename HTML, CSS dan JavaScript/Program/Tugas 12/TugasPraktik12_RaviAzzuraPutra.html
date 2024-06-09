@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktik 12</title>
+</head>
+
+<body>
+    <h1 id="judul">
+        Belajar error dan debugging
+    </h1>
+    <button type="button" id="tombol">Click Saya!!</button>
+</body>
+<script>
+    debugger;
+    try {
+        document.getElementById("tombol").addEventListener("click", function () {
+            alerttt("Ini adalah judul"); // sengaja saya error kan
+        })
+    } catch (error) {
+        console.log("Terjadi kesalaah : ", error.message);
+    } finally {
+        console.log("Belajar Error dan debugging");
+    }
+</script>
+
+</html>

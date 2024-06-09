@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ravi Azzura Putra</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="..."></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="..." crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            /* Lebih besar untuk tampilan yang lebih menarik */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            /* Bayangan lebih besar untuk efek menarik */
+        }
+
+        .btn {
+            border-radius: 31px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="<% url %>">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="<% url %>">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<% url %>profile">Profile</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <%= userName %>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="<% url %>profile">Profil</a></li>
+                    <li><a class="dropdown-item" href="<% url %>login/logout">Logout</a></li>
+                  </ul>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="mt-4 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Hi, <b><%= userName %></b></h3>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <strong>ラヴィ   アズラ   プトラ</strong>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</body>
+<style>
+    body,html {
+        font-family: 'Times New Roman', Times, serif;
+        height: 100%;
+        padding-top: 2rem;
+    }
+</style>
+</html>

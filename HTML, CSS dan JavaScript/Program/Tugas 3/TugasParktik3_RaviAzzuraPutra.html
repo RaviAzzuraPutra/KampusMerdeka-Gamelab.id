@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktik 3</title>
+</head>
+
+<body>
+    <div align="center">
+        <strong>
+            <ins>
+                FORMULIR PENDAFTARAN
+            </ins>
+        </strong><br><br>
+        <video width="320" height="240" controls>
+            <source src="Video.mp4" type="video/mp4">
+        </video> <br>
+        <canvas id="CANVAS" width="301" height="201" style="border: 1px solid #323232;">
+
+        </canvas></br>
+        <label for="nama">Nama Lengkap: </label>
+        <input type="text" name="nama"><br>
+        <label for="tempatlahir">Tempat Lahir: </label>
+        <input type="text" name="tempatlahir"><br>
+        <label for="tanggallahir">Tanggal Lahir: </label>
+        <input type="date" name="tanggallahir"><br>
+        <label for="jeniskelamin">Jenis Kelamin: </label>
+        <input type="radio" name="jeniskelamin" id="jeniskelaminL"> Laki Laki
+        <input type="radio" name="jeniskelamin" id="jeniskelaminP"> Perempuan <br>
+        <label for="alamat">Alamat: </label>
+        <textarea name="alamat" rows="4" cols="20"></textarea><br>
+        <label for="email">Email: </label>
+        <input type="email" name="email"><br>
+        <label for="hp">No Hp: </label>
+        <input type="number" name="hp"><br>
+        <label for="kota">Kota: </label>
+        <select name="kota">
+            <option>-Pilih Kota</option>
+            <option>Jakarta</option>
+            <option>Bandung</option>
+            <option>Semarang</option>
+            <option>Surabaya</option>
+            <option>Serang</option>
+        </select><br>
+
+        <div style="margin-top: 10px;">
+            <input type="submit" value="Submit" style="margin-right: 10px;">
+            <input type="button" value="Batal">
+        </div>
+    </div>
+</body>
+
+<script>
+    window.onload = function () {
+        var canvas = document.getElementById('CANVAS');
+        var context = canvas.getContext('2d');
+
+        // Mengatur warna teks dan font
+        context.fillStyle = 'black';
+        context.font = '30px Arial';
+
+        // Menggambar teks di tengah canvas
+        var text = 'Educa Studio';
+        var textWidth = context.measureText(text).width;
+        var x = (canvas.width - textWidth) / 2;
+        var y = canvas.height / 2;
+        context.fillText(text, x, y);
+    };
+</script>
+
+</html>

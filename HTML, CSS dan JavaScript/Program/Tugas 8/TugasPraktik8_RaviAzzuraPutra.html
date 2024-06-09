@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktik 8</title>
+    <style>
+        body {
+            background-color: darkcyan;
+        }
+
+        h1 {
+            color: brown;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h2 {
+            color: pink;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Tugas Praktik 8 GameLab.id
+    </h1>
+    <h2>
+        Click Tombol
+    </h2>
+    <button type="button" id="button">Click Saya!</button>
+</body>
+<script>
+    document.getElementById("button").addEventListener("click", function () {
+        let nama = prompt("Masukkan Nama Anda: ", "ラヴィ アズラ プトラ");
+        alert("Nama anda adalah" + nama);
+        console.log(nama);
+    });
+
+</script>
+
+</html>

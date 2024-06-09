@@ -1,0 +1,48 @@
+[{
+  "kode_mapel": "AP",
+  "nama_mapel": "Algoritma Pemrograman"
+},
+{
+  "kode_mapel": "JK",
+  "nama_mapel": "Jaringan Komputer"
+},
+{
+  "kode_mapel": "PW",
+  "nama_mapel": "Pemrograman Dasar Web"
+},
+{
+  "kode_mapel": "DG",
+  "nama_mapel": "Desain Grafis"
+},
+{
+  "kode_mapel": "MM",
+  "nama_mapel": "Multimedia"
+},
+{
+  "kode_mapel": "MTK",
+  "nama_mapel": "Matematika"
+},
+{
+  "kode_mapel": "BING",
+  "nama_mapel": "Bahasa Inggris"
+},
+{
+  "kode_mapel": "BI",
+  "nama_mapel": "Bahasa Indonesia"
+},
+{
+  "kode_mapel": "SJR",
+  "nama_mapel": "SEJARAH"
+},
+{
+  "kode_mapel": "SB",
+  "nama_mapel": "SENI BUDAYA"
+},
+{
+  "kode_mapel": "PJOK",
+  "nama_mapel": "PENJASORKES"
+},
+{
+  "kode_mapel": "SO",
+  "nama_mapel": "Sistem Operasi"
+}]

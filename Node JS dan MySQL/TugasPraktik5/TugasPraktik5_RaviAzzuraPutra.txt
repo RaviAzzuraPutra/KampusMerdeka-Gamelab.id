@@ -1,0 +1,145 @@
+MariaDB [(none)]> show database
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'database' at line 1
+MariaDB [(none)]> show databases;
++------------------------+
+| Database               |
++------------------------+
+|  atol_universitas      |
+| crime_map              |
+| dbpenjualan            |
+| futsal                 |
+| gamelab                |
+| information_schema     |
+| mysql                  |
+| pegawai                |
+| penyewaan_futsal       |
+| performance_schema     |
+| phpmyadmin             |
+| sample-sql-file-10rows |
+| tabel_karyawan         |
+| test                   |
+| ujungberung_db         |
++------------------------+
+15 rows in set (0.012 sec)
+
+MariaDB [(none)]> use gamelab
+Database changed
+MariaDB [gamelab]> show tables
+    -> ;
++-------------------+
+| Tables_in_gamelab |
++-------------------+
+| contacts          |
++-------------------+
+1 row in set (0.007 sec)
+
+MariaDB [gamelab]> --Menampilkan data sebelum di replace
+MariaDB [gamelab]> select * from contacts
+    -> ;
++----+-------------------+---------------------+--------------+
+| id | Nama              | Email               | NoTelepon    |
++----+-------------------+---------------------+--------------+
+|  1 | Okkotsu Yuta      | yuta@gmail.com      | 082437805643 |
+|  2 | Horikita Suzune   | suzune@gmail.com    | 081297004532 |
+|  3 | Doddy Fersiansyah | doddy@gmail.com     | 081471234085 |
+|  4 | Sakura            | sakura@gmail.com    | 081590542201 |
+|  5 | Hernandez         | Hernandez@gmail.com | 081312201169 |
+|  6 | Nandhita Syifa    | nandhita@gmail.com  | 081813579002 |
+|  7 | Lionel Messi      | Messi@gmail.com     | 081820503884 |
+|  8 | Melissa           | melissa@gmail.com   | 081813009521 |
+|  9 | Bellerick         | bellerick@yahoo.com | 082219112347 |
+| 10 | Novaria           | novaria@gmail.com   | 081399732069 |
++----+-------------------+---------------------+--------------+
+10 rows in set (0.009 sec)
+
+MariaDB [gamelab]> UPDATE contacts SET
+    -> Email = REPLACE (Email, 'yuta@gmail.com', 'yuta@yahoo.com');
+Query OK, 1 row affected (0.016 sec)
+Rows matched: 10  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET
+    -> Nama = REPLACE (Nama, 'Nandhita Syifa', 'Frieren');
+Query OK, 1 row affected (0.010 sec)
+Rows matched: 10  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET
+    -> Email = REPLACE (Email, 'nandhita@gmail.com', 'frieren@magic.com');
+Query OK, 1 row affected (0.009 sec)
+Rows matched: 10  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET
+    -> NoTelepon = REPLACE (NoTelepon, '081399732069', '081300843172');
+Query OK, 1 row affected (0.002 sec)
+Rows matched: 10  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET
+    -> Email = REPLACE (Email, 'bellerick@yahoo.com', 'bellerick@moonton.com');
+Query OK, 1 row affected (0.005 sec)
+Rows matched: 10  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> -- Menampilkan data yang sudah di replace
+MariaDB [gamelab]> select * from contacts;
++----+-------------------+-----------------------+--------------+
+| id | Nama              | Email                 | NoTelepon    |
++----+-------------------+-----------------------+--------------+
+|  1 | Okkotsu Yuta      | yuta@yahoo.com        | 082437805643 |
+|  2 | Horikita Suzune   | suzune@gmail.com      | 081297004532 |
+|  3 | Doddy Fersiansyah | doddy@gmail.com       | 081471234085 |
+|  4 | Sakura            | sakura@gmail.com      | 081590542201 |
+|  5 | Hernandez         | Hernandez@gmail.com   | 081312201169 |
+|  6 | Frieren           | frieren@magic.com     | 081813579002 |
+|  7 | Lionel Messi      | Messi@gmail.com       | 081820503884 |
+|  8 | Melissa           | melissa@gmail.com     | 081813009521 |
+|  9 | Bellerick         | bellerick@moonton.com | 082219112347 |
+| 10 | Novaria           | novaria@gmail.com     | 081300843172 |
++----+-------------------+-----------------------+--------------+
+10 rows in set (0.001 sec)
+
+MariaDB [gamelab]> --Menampilkan Data Sebelum Di Delete
+MariaDB [gamelab]> select * from contacts;
++----+-------------------+-----------------------+--------------+
+| id | Nama              | Email                 | NoTelepon    |
++----+-------------------+-----------------------+--------------+
+|  1 | Okkotsu Yuta      | yuta@yahoo.com        | 082437805643 |
+|  2 | Horikita Suzune   | suzune@gmail.com      | 081297004532 |
+|  3 | Doddy Fersiansyah | doddy@gmail.com       | 081471234085 |
+|  4 | Sakura            | sakura@gmail.com      | 081590542201 |
+|  5 | Hernandez         | Hernandez@gmail.com   | 081312201169 |
+|  6 | Frieren           | frieren@magic.com     | 081813579002 |
+|  7 | Lionel Messi      | Messi@gmail.com       | 081820503884 |
+|  8 | Melissa           | melissa@gmail.com     | 081813009521 |
+|  9 | Bellerick         | bellerick@moonton.com | 082219112347 |
+| 10 | Novaria           | novaria@gmail.com     | 081300843172 |
++----+-------------------+-----------------------+--------------+
+10 rows in set (0.001 sec)
+
+MariaDB [gamelab]> DELETE FROM contacts WHERE id = 10;
+Query OK, 1 row affected (0.010 sec)
+
+MariaDB [gamelab]> DELETE FROM contacts WHERE id = 9;
+Query OK, 1 row affected (0.008 sec)
+
+MariaDB [gamelab]> DELETE FROM contacts WHERE id = 8;
+Query OK, 1 row affected (0.009 sec)
+
+MariaDB [gamelab]> DELETE FROM contacts WHERE id = 7;
+Query OK, 1 row affected (0.007 sec)
+
+MariaDB [gamelab]> DELETE FROM contacts WHERE id = 5;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [gamelab]> --Menampilkan data sesudah dihapus
+MariaDB [gamelab]> select * from contacts;
++----+-------------------+-------------------+--------------+
+| id | Nama              | Email             | NoTelepon    |
++----+-------------------+-------------------+--------------+
+|  1 | Okkotsu Yuta      | yuta@yahoo.com    | 082437805643 |
+|  2 | Horikita Suzune   | suzune@gmail.com  | 081297004532 |
+|  3 | Doddy Fersiansyah | doddy@gmail.com   | 081471234085 |
+|  4 | Sakura            | sakura@gmail.com  | 081590542201 |
+|  6 | Frieren           | frieren@magic.com | 081813579002 |
++----+-------------------+-------------------+--------------+
+5 rows in set (0.001 sec)
+
+MariaDB [gamelab]> notee;

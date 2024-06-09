@@ -1,0 +1,86 @@
+MariaDB [gamelab]> -- Query Untuk Membuat Table
+MariaDB [gamelab]> CREATE TABLE contacts (
+    -> id INT AUTO_INCREMENT PRIMARY KEY,
+    -> Nama VARCHAR(225) NOT NULL,
+    -> Email VARCHAR(225),
+    -> NoTelepon VARCHAR(12) NOT NULL);
+Query OK, 0 rows affected (0.016 sec)
+
+MariaDB [gamelab]> --Query Untuk Menambahkan 10 Table Sekaligus
+MariaDB [gamelab]> INSERT INTO contacts (Nama, Email, NoTelepon)
+    -> VALUES 
+    -> ('Okkotsu Yuta', 'yuta@gmail.com' '081326794532'),
+    -> ('Horikita Suzune', 'suzune@gmail.com' '081297004532'),
+    -> ('Doddy Fersiansyah', 'doddy@gmail.com' '081471234085'),
+    -> ('Sakura', 'sakura@gmail.com' '081590542201'),
+    -> ('Ravi Azzura Putra', 'ravi@gmail.com' '081312201169'),
+    -> ('Nandhita Syifa', 'nandhita@gmail.com' '081813579002'),
+    -> ('Gilang Setiawan Putra', 'gilang@gmail.com' '081820503884'),
+    -> ('Melissa', 'melissa@gmail.com' '081813009521'),
+    -> ('Bellerick', 'bellerick@gmail.com' '081108001236'),
+    -> ('Novaria', 'novaria@gmail.com' '081298650036');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [gamelab]> INSERT INTO contacts (Nama, Email, NoTelepon)
+    -> VALUES 
+    -> ('Okkotsu Yuta', 'yuta@gmail.com' ,'081326794532'),
+    -> ('Horikita Suzune', 'suzune@gmail.com', '081297004532'),
+    -> ('Doddy Fersiansyah', 'doddy@gmail.com', '081471234085'),
+    -> ('Sakura', 'sakura@gmail.com', '081590542201'),
+    -> ('Ravi Azzura Putra', 'ravi@gmail.com', '081312201169'),
+    -> ('Nandhita Syifa', 'nandhita@gmail.com', '081813579002'),
+    -> ('Gilang Setiawan Putra', 'gilang@gmail.com', '081820503884'),
+    -> ('Melissa', 'melissa@gmail.com', '081813009521'),
+    -> ('Bellerick', 'bellerick@gmail.com', '081108001236'),
+    -> ('Novaria', 'novaria@gmail.com', '081298650036');
+Query OK, 10 rows affected (0.007 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [gamelab]> --Meng-Update Minimal 5 Data
+MariaDB [gamelab]> --Update 1
+MariaDB [gamelab]> UPDATE contacts SET NoTelepon = '082437805643' WHERE id=1;
+Query OK, 1 row affected (0.008 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET 
+    -> Nama = 'Hernandez',
+    -> Email = 'Hernandez@gmail.com'
+    -> WHERE id = 5;
+Query OK, 1 row affected (0.003 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET 
+    -> Nama = 'Lionel Messi',
+    -> Email = 'Messi@gmail.com'
+    -> WHERE id=7;
+Query OK, 1 row affected (0.008 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET 
+    -> Email = 'bellerick@yahoo.com',
+    -> NoTelepon = '082219112347'
+    -> WHERE id = 9;
+Query OK, 1 row affected (0.008 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> UPDATE contacts SET NoTelepon = '081399732069' WHERE id=10;
+Query OK, 1 row affected (0.007 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [gamelab]> select * from contacts;
++----+-------------------+---------------------+--------------+
+| id | Nama              | Email               | NoTelepon    |
++----+-------------------+---------------------+--------------+
+|  1 | Okkotsu Yuta      | yuta@gmail.com      | 082437805643 |
+|  2 | Horikita Suzune   | suzune@gmail.com    | 081297004532 |
+|  3 | Doddy Fersiansyah | doddy@gmail.com     | 081471234085 |
+|  4 | Sakura            | sakura@gmail.com    | 081590542201 |
+|  5 | Hernandez         | Hernandez@gmail.com | 081312201169 |
+|  6 | Nandhita Syifa    | nandhita@gmail.com  | 081813579002 |
+|  7 | Lionel Messi      | Messi@gmail.com     | 081820503884 |
+|  8 | Melissa           | melissa@gmail.com   | 081813009521 |
+|  9 | Bellerick         | bellerick@yahoo.com | 082219112347 |
+| 10 | Novaria           | novaria@gmail.com   | 081399732069 |
++----+-------------------+---------------------+--------------+
+10 rows in set (0.001 sec)
+
+MariaDB [gamelab]> notee;

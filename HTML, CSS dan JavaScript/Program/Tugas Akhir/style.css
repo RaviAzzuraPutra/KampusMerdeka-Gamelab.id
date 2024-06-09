@@ -1,0 +1,27 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: azure;
+}
+
+h1 {
+    text-align: center;
+    background-color: aqua;
+    color: maroon;
+}
+
+h2 {
+    background-color: gold;
+    color: black;
+    text-align: center;
+}
+
+form {
+    max-width: 501px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}

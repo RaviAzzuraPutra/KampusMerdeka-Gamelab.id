@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Akhir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Data Pasien</h1>
+
+    <h2>Tambah Pasien Baru</h2>
+    <label for="cariPasienInput">Cari Pasien</label>
+    <input type="text" id="cariPasienInput" name="cariPasienInput" required>
+    <button type="button" id="cariPasienButton" onclick="CariPasien()">Cari Pasien</button>
+
+    <div id="hasilPencarianPasien" style="display: none;"></div>
+
+    <form id=" FormMenambahkanPasien" onsubmit="MenambahkanPasien(event)">
+        <label for="id">Id Pasien </label>
+        <br>
+        <input type="text" id="id" name="id" require>
+        <br>
+        <label for="nama">Nama Pasien</label>
+        <br>
+        <input type="text" id="nama" name="nama" require>
+        <br>
+        <label for="alamat">Alamat Lengkap Pasien</label>
+        <br>
+        <textarea id="alamat" name="alamat" rows="4" required></textarea>
+        <br>
+        <label for="penyakit">Penyakit</label>
+        <br>
+        <input type="text" id="penyakit" name="penyakit" require>
+        <br>
+        <label for="NoRuang">No Ruang</label>
+        <br>
+        <input type="text" id="noRuang" name="noRuang" require>
+        <br>
+        <label>BPJS</label>
+        <br>
+        <select id="bpjs" name="bpjs" required>
+            <option value="Tidak menggunakan">Tidak menggunakan</option>
+            <option value="Kelas I">Kelas I</option>
+            <option value="Kelas II">Kelas II</option>
+            <option value="Kelas III">Kelas III</option>
+        </select>
+        <br>
+        <label for="dateIn">Tanggal Masuk</label>
+        <br>
+        <input type="date" id="dateIn" name="dateIn" required>
+        <br>
+        <label for="dateIn">Tanggal Keluar</label>
+        <br>
+        <input type="date" id="dateOut" name="dateOut" required>
+        <br>
+        <button type="submit" o>Tambah Pasien</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <div id="output"></div>
+</body>
+<script src="script.js"></script>
+
+</html>

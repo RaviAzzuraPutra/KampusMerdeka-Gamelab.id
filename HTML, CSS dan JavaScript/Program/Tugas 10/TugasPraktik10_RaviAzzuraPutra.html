@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Praktik 10</title>
+    <style>
+        img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Ronaldo.jpg" alt="Ronaldo" onclick="tentangPemain('Ronaldo')">
+    <img src="Messi.jpeg" alt="Messi" onclick="tentangPemain('Messi')">
+    <img src="Mudryk.jpg" alt="Mudryk" onclick="tentangPemain('Mudryk')">
+
+    <p id="keterangan"></p>
+</body>
+<script>
+    const tentangPemain = (pemain) => {
+        let keterangan = document.getElementById("keterangan")
+        if (pemain === 'Ronaldo') {
+            keterangan.innerText = "Cristiano Ronaldo dos Santos Aveiro adalah seorang pemain sepak bola profesional asal Portugal yang bermain di klub Arab Saudi Al-Nassr FC sebagai penyerang dan juga kapten tim nasional Portugal.";
+            document.body.style.backgroundColor = "red";
+        }
+        else if (pemain === 'Messi') {
+            keterangan.innerText = "Lionel Andrés Messi juga dikenal sebagai Leo Messi adalah seorang pemain sepak bola profesional asal Argentina yang akan bermain sebagai penyerang untuk klub Major League Soccer Inter Miami CF dan merupakan kapten tim nasional Argentina.";
+            document.body.style.backgroundColor = "blue";
+        }
+        else if (pemain === "Mudryk") {
+            keterangan.innerText = "Mykhailo Petrovych Mudryk adalah seorang pemain sepak bola profesional asal Ukraina untuk klub Liga Utama Inggris Chelsea dan tim nasional Ukraina. Mudryk memulai karier sepak bola dengan akademi Metalist Kharkiv pada 2010 sebelum bergabung dengan akademi Shakhtar Donetsk pada 2016. ";
+            document.body.style.backgroundColor = "gold";
+        }
+    }
+</script>
+
+</html>

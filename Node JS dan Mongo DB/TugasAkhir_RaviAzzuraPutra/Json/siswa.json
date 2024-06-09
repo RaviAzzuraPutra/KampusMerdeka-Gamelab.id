@@ -1,0 +1,40 @@
+[{
+  "kode_kelas": "TKJ1",
+  "kode_mapel": "AP",
+  "nis": 1001,
+  "nama_siswa": "Andi",
+  "jk":"L",
+  "alamat":"Salatiga"
+},
+{
+  "kode_kelas": "TKJ1",
+  "kode_mapel": "JK",
+  "nis": 1002,
+  "nama_siswa": "Budi",
+  "jk":"L",
+  "alamat":"Salatiga"
+},
+{
+  "kode_kelas": "TKJ1",
+  "kode_mapel": "PW",
+  "nis": 1001,
+  "nama_siswa": "Charly",
+  "jk":"L",
+  "alamat":"Salatiga"
+},
+{
+  "kode_kelas": "RPL1",
+  "kode_mapel": "MTK",
+  "nis": 1001,
+  "nama_siswa": "Dian",
+  "jk":"P",
+  "alamat":"Salatiga"
+},
+{
+  "kode_kelas": "RPL1",
+  "kode_mapel": "PW",
+  "nis": 1001,
+  "nama_siswa": "Shinta",
+  "jk":"P",
+  "alamat":"Salatiga"
+}]

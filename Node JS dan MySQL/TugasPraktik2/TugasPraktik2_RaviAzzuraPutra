@@ -1,0 +1,131 @@
+MariaDB [(none)]> -- 1 menampilkan database
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+|  atol_universitas  |
+| crime_map          |
+| crud_mapbox        |
+| dbpenjualan        |
+| futsal             |
+| gamelabid          |
+| information_schema |
+| mysql              |
+| pegawai            |
+| penyewaan_futsal   |
+| performance_schema |
+| phpmyadmin         |
+| tabel_karyawan     |
+| test               |
+| ujungberung_db     |
++--------------------+
+15 rows in set (0.001 sec)
+
+MariaDB [(none)]> drop database gamelabID;
+Query OK, 1 row affected (0.015 sec)
+
+MariaDB [(none)]> --1 Menampilkan Database
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+|  atol_universitas  |
+| crime_map          |
+| crud_mapbox        |
+| dbpenjualan        |
+| futsal             |
+| information_schema |
+| mysql              |
+| pegawai            |
+| penyewaan_futsal   |
+| performance_schema |
+| phpmyadmin         |
+| tabel_karyawan     |
+| test               |
+| ujungberung_db     |
++--------------------+
+14 rows in set (0.001 sec)
+
+MariaDB [(none)]> --2 membuat database
+MariaDB [(none)]> create database gamelabid;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> --3 menggunakan database
+MariaDB [(none)]> use gamelabid
+Database changed
+MariaDB [gamelabid]> --4 menghapus database;
+MariaDB [gamelabid]> drop database gamelabID;
+Query OK, 0 rows affected (0.002 sec)
+
+MariaDB [(none)]> create database gamelabid;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> --5 membuat table
+MariaDB [(none)]> create table data(
+    -> Id INT AUTO_INCREMENT PRIMARY KEY,
+    -> Nama VARCHAR(255) NOT NULL,
+    -> Email VARCHAR(225),
+    -> NoTelepon VARCHAR(225),
+    -> Tgl_Lahir DATE);
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> use gamelabid;
+Database changed
+MariaDB [gamelabid]> create table data(
+    -> Id INT AUTO_INCREMENT PRIMARY KEY,
+    -> Nama VARCHAR(255) NOT NULL,
+    -> Email VARCHAR(225),
+    -> NoTelepon VARCHAR(225),
+    -> Tgl_Lahir DATE);
+Query OK, 0 rows affected (0.017 sec)
+
+MariaDB [gamelabid]> describe data;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| Id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Nama      | varchar(255) | NO   |     | NULL    |                |
+| Email     | varchar(225) | YES  |     | NULL    |                |
+| NoTelepon | varchar(225) | YES  |     | NULL    |                |
+| Tgl_Lahir | date         | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.025 sec)
+
+MariaDB [gamelabid]> --6 Menampilkan isi detail table
+MariaDB [gamelabid]> describe data;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| Id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Nama      | varchar(255) | NO   |     | NULL    |                |
+| Email     | varchar(225) | YES  |     | NULL    |                |
+| NoTelepon | varchar(225) | YES  |     | NULL    |                |
+| Tgl_Lahir | date         | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.025 sec)
+
+MariaDB [gamelabid]> --7 Me-rename Table
+MariaDB [gamelabid]> ALTER TABLE data
+    -> RENAME COLUMN data TO gamelabid;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'COLUMN data TO gamelabid' at line 2
+MariaDB [gamelabid]> 
+MariaDB [gamelabid]> 
+MariaDB [gamelabid]> 
+MariaDB [gamelabid]> 
+MariaDB [gamelabid]> 
+MariaDB [gamelabid]> --7 Me-rename table
+MariaDB [gamelabid]> rename table data TO gamelabid
+    -> ;
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [gamelabid]> --8 Mengubah Table
+MariaDB [gamelabid]> ALTER TABLE gamelabid
+    -> MODIFY Nama VARCHAR(225)
+    -> ;
+Query OK, 0 rows affected (0.042 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [gamelabid]> --9 menghapus table 
+MariaDB [gamelabid]> DROP table gamelabid;
+Query OK, 0 rows affected (0.014 sec)
+
+MariaDB [gamelabid]> 
