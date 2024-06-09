@@ -1,6 +1,6 @@
 # KampusMerdeka-Gamelab.id
 
-Hasil Belajar di Bootcamp Kampus Merdeka Mitra Gamelab
+# Hasil Belajar di Bootcamp Kampus Merdeka Mitra Gamelab
 
 Repository ini berisi hasil belajar dan proyek yang saya kerjakan selama mengikuti program Bootcamp Kampus Merdeka dengan mitra Gamelab. Program ini dirancang untuk meningkatkan keterampilan saya dalam pengembangan perangkat lunak dan memberikan pengalaman praktis yang relevan dengan industri.
 
@@ -21,3 +21,5 @@ Pembelajaran tentang pengembangan backend menggunakan Node.js dan database NoSQL
 
 # Node.js dan MySQL
 Materi tentang penggunaan Node.js dengan database relasional MySQL.
+
+.
